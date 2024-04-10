@@ -1,7 +1,7 @@
 package co.edu.escuelaing.cvds.lab7.service;
 
-import co.edu.escuelaing.cvds.lab7.model.Configuration;
-import co.edu.escuelaing.cvds.lab7.repository.ConfigurationRepository;
+import co.edu.escuelaing.cvds.lab7.model.Employee;
+import co.edu.escuelaing.cvds.lab7.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,38 +9,38 @@ import java.util.List;
 
 @Service
 public class EmployeeService {
-    private final ConfigurationRepository configurationRepository;
+    private final EmployeeRepository employeeRepository;
 
     @Autowired
-    public EmployeeService(ConfigurationRepository configurationRepository) {
-        this.configurationRepository = configurationRepository;
+    public EmployeeService(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
     }
 
-    public Configuration addConfiguration(Configuration configuration) {
-        return configurationRepository.save(configuration);
+    public Employee addEmployee(Employee employee) {
+        return employeeRepository.save(employee);
     }
 
-    public Configuration getConfiguration(String propiedad) {
-        return configurationRepository.findByPropiedad(propiedad).get(1);
+    public Employee getEmployee(String employee_id) {
+        return employeeRepository.findByEmployeeId(employee_id).get(1);
     }
 
-    public List<Configuration> getAllConfigurations() {
-        return configurationRepository.findAll();
+    public List<Employee> getAllEmployees() {
+        return employeeRepository.findAll();
     }
 
-    public Configuration updateConfiguration(Configuration configuration) {
-        if (configurationRepository.findByPropiedad(configuration.getPropiedad()).size() == 0) {
-            return configurationRepository.save(configuration);
+    public Employee updateEmployee(Employee employee) {
+        if (employeeRepository.findByEmployeeId(employee.getemployee_id()).size() == 0) {
+            return employeeRepository.save(employee);
         }
 
         return null;
     }
 
-    public void deleteConfiguration(String propiedad) {
-        configurationRepository.deleteById(propiedad);
+    public void deleteEmployee(String employee_id) {
+        employeeRepository.deleteById(employee_id);
     }
 
-    public String getPremio() {
-        return configurationRepository.findByPropiedad("premio").get(0).getValor();
+    public String getEmployeeId() {
+        return employeeRepository.findByEmployeeId("112").get(0).getfirst_name();
     }
 }

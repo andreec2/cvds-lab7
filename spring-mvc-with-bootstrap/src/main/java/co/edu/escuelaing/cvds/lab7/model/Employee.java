@@ -10,7 +10,7 @@ import jakarta.persistence.Persistence;
 import jakarta.persistence.Query;
 
 @Entity
-@Table(name = "CONFIGURATION")
+@Table(name = "EMPLOYEE")
 public class Employee {
     @Id
     @Column(name = "EMPLOYEE_ID")

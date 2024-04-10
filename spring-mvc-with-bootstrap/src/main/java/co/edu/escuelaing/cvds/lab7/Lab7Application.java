@@ -1,10 +1,8 @@
 package co.edu.escuelaing.cvds.lab7;
 
-import co.edu.escuelaing.cvds.lab7.model.Configuration;
-import co.edu.escuelaing.cvds.lab7.model.User;
-import co.edu.escuelaing.cvds.lab7.model.UserRole;
-import co.edu.escuelaing.cvds.lab7.repository.UserRepository;
-import co.edu.escuelaing.cvds.lab7.service.ConfigurationService;
+import co.edu.escuelaing.cvds.lab7.model.*;
+import co.edu.escuelaing.cvds.lab7.repository.*;
+import co.edu.escuelaing.cvds.lab7.service.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -18,16 +16,16 @@ import java.util.Arrays;
 @SpringBootApplication
 @Slf4j
 public class Lab7Application {
-	private final ConfigurationService configurationService;
+	private final EmployeeService employeeService;
 
 	private final UserRepository userRepository;
 
 	@Autowired
 	public Lab7Application(
-			ConfigurationService configurationService,
+			EmployeeService employeeService,
 			UserRepository userRepository
 	) {
-		this.configurationService = configurationService;
+		this.employeeService = employeeService;
 		this.userRepository = userRepository;
 	}
 
@@ -38,13 +36,11 @@ public class Lab7Application {
 	@Bean
 	public CommandLineRunner run() {
 		return (args) -> {
-			log.info("Adding Configurations....");
-			configurationService.addConfiguration(new Configuration("premio", "810000"));
-			configurationService.addConfiguration(new Configuration("descuento", "0.1"));
-			configurationService.addConfiguration(new Configuration("app-name", "Miraculous: Las Aventuras de Ladybug"));
+			log.info("Adding employee....");
+			employeeService.addEmployee(new Employee("112","mauricio","javier","sm", 0.0));
 
-			log.info("\nGetting all configurations....");
-			configurationService.getAllConfigurations().forEach(configuration -> System.out.println(configuration));
+			log.info("\nGetting all employee....");
+			employeeService.getAllEmployees().forEach(employee -> System.out.println(employee));
 
 			log.info("\nAdding admin@site.org user with Password: admin");
 			userRepository.save(new User("admin@site.org", "admin", Arrays.asList(UserRole.ADMINISTRADOR, UserRole.CLIENTE)));
