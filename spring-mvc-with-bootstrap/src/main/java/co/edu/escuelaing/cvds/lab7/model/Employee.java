@@ -14,11 +14,11 @@ import jakarta.persistence.Query;
 public class Employee {
     @Id
     @Column(name = "EMPLOYEE_ID")
-    private String employee_id;
+    private String employeeId;
     @Column(name = "FIRST_NAME")
-    private String first_name;
+    private String firstName;
     @Column(name = "LAST_NAME")
-    private String last_name;
+    private String lastName;
     @Column(name = "ROLE")
     private String role;
     @Column(name = "SALARY")
@@ -28,27 +28,27 @@ public class Employee {
     }
 
     public Employee(String employee_id, String first_name, String role, String last_name, Double salary) {
-        this.employee_id = employee_id;
-        this.first_name = first_name;
+        this.employeeId = employee_id;
+        this.firstName = first_name;
         this.salary = salary;
         this.role = role;
-        this.last_name  = last_name;
+        this.lastName  = last_name;
     }
 
     public String getemployee_id() {
-        return employee_id;
+        return employeeId;
     }
 
     public void setemployee_id(String employee_id) {
-        this.employee_id = employee_id;
+        this.employeeId = employee_id;
     }
 
     public String getfirst_name() {
-        return first_name;
+        return firstName;
     }
 
     public void setfirst_name(String first_name) {
-        this.first_name = first_name;
+        this.firstName = first_name;
     }
 
 
@@ -86,13 +86,13 @@ public class Employee {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((employee_id == null) ? 0 : employee_id.hashCode());
-        result = prime * result + ((first_name == null) ? 0 : first_name.hashCode());
+        result = prime * result + ((employeeId == null) ? 0 : employeeId.hashCode());
+        result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
         return result;
     }
 
     @Override
     public String toString() {
-        return "Configuration [propiedad = " + employee_id + ", valor = " + first_name + "]";
+        return "Configuration [propiedad = " + employeeId + ", valor = " + firstName + "]";
     }
 }
