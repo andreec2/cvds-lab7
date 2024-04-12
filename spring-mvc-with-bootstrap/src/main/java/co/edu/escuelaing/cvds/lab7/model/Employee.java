@@ -15,6 +15,11 @@ public class Employee {
     @Id
     @Column(name = "EMPLOYEE_ID")
     private String employeeId;
+    /*
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long employeeId;
+     */
+
     @Column(name = "FIRST_NAME")
     private String firstName;
     @Column(name = "LAST_NAME")
