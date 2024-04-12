@@ -23,6 +23,22 @@ Podria crear la base de datos con el nombre "cvds", para esto debemos ir a DBeav
 
 luego dejamos el archivo applicatio.propertie como estaba y volvemos a ejecutar.
 
+# Front-end en Reack
+- Lo primero que debemos hacer es descargar e instalar Node.js
+  ![image](https://github.com/Mauricio-A-Monroy/lab7/assets/111905757/a4cc5e19-7403-4d4f-b3eb-ff1a684899d3)
+- Para verificar que se haya descargado e instalado correctamente usamos los comando `node -v` y `npm -v` para que nos muestre las versiones.
+![image](https://github.com/Mauricio-A-Monroy/lab7/assets/111905757/58d55b77-2e96-4c02-8d98-8f1acf3281fd)
+- Crear app de react en el proyecto de maven usando el comando `npx create-react-app mynewapp`
+![image](https://github.com/Mauricio-A-Monroy/lab7/assets/111905757/10623b16-e9cd-40a7-aa09-759ceb5c0485)
+- incresar a la carpeta donde se creo la aplicacion e iniciar el servidor con `npm strat`
+![image](https://github.com/Mauricio-A-Monroy/lab7/assets/111905757/7c24a545-9078-493f-9efd-af1859db8ffb)
+![image](https://github.com/Mauricio-A-Monroy/lab7/assets/111905757/ea1d6c96-d617-43e3-a948-fca73497ced2)
+
+
+
+
+
+
 
 
 
