@@ -15,6 +15,11 @@
 	<description>Manejo de Data - ORM</description>
 	<properties>
 		<java.version>17</java.version>
+		<kotlin.version>1.3.61</kotlin.version>
+        <mynewappSrcDir>${project.basedir}/mynewapp</mynewappSrcDir>
+        <node.version>v20.12.2</node.version>
+        <npm.version>10.5.2</npm.version>
+        <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -63,6 +68,53 @@
 					<addResources>true</addResources>
 				</configuration>
 			</plugin>
+
+			<plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>${frontend-maven-plugin.version}</version>
+
+                <configuration>
+                    <nodeVersion>${node.version}</nodeVersion>
+                    <npmVersion>${npm.version}</npmVersion>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <id>install-frontend-tools</id>
+                        <goals>
+                            <goal>install-node-and-npm</goal>
+                        </goals>
+                        <configuration>
+                            <workingDirectory>${mynewappSrcDir}</workingDirectory>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>npm-install</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <workingDirectory>${mynewappSrcDir}</workingDirectory>
+                            <arguments>install</arguments>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>build-mynewapp</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <workingDirectory>${mynewappSrcDir}</workingDirectory>
+                            <arguments>run build</arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+
+            </plugin>
+
 		</plugins>
 	</build>
 
