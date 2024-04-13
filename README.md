@@ -51,6 +51,11 @@ luego dejamos el archivo applicatio.propertie como estaba y volvemos a ejecutar.
 
 -Ahora se empezaran a crear las funciones/pantallas para adduser, updateuser y deleteUser
 
+-Adduser
+
+![image](https://github.com/andreec2/cvds-lab7/assets/99145156/fd9c8821-6823-4a68-be6a-4345816c6e96)
+
+
 
 
 
