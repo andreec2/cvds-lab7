@@ -53,7 +53,8 @@ luego dejamos el archivo applicatio.propertie como estaba y volvemos a ejecutar.
 
 -Adduser
 
-![image](https://github.com/andreec2/cvds-lab7/assets/99145156/fd9c8821-6823-4a68-be6a-4345816c6e96)
+![image](https://github.com/andreec2/cvds-lab7/assets/99145156/90d499fd-8f51-4d42-838c-042ee390ffa7)
+
 
 
 
