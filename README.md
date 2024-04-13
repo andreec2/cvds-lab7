@@ -44,7 +44,7 @@ luego dejamos el archivo applicatio.propertie como estaba y volvemos a ejecutar.
 ![image](https://github.com/andreec2/cvds-lab7/assets/99145156/326fb9d1-bc18-4c05-a98d-496321e561b6)
 
 -Ahora ya confirmado su funcionamiento nos conectaremos al back 
--como primer paso usaremos el comando mpn install `axios --save`
+-como primer paso usaremos el comando `mpn install axios --save`
 .Ya instalado nos vamos a conectar al back y quitaremos los datos estaticos
 
 ![image](https://github.com/andreec2/cvds-lab7/assets/99145156/d96e6bce-b1df-4793-904a-c8071403ffea)
