@@ -30,7 +30,11 @@ luego dejamos el archivo applicatio.propertie como estaba y volvemos a ejecutar.
 ![image](https://github.com/Mauricio-A-Monroy/lab7/assets/111905757/58d55b77-2e96-4c02-8d98-8f1acf3281fd)
 - Crear app de react en el proyecto de maven usando el comando `npx create-react-app mynewapp`
 ![image](https://github.com/Mauricio-A-Monroy/lab7/assets/111905757/10623b16-e9cd-40a7-aa09-759ceb5c0485)
-- incresar a la carpeta donde se creo la aplicacion e iniciar el servidor con `npm strat`
+
+- Despues de usar el comando `npm install` en caso de no descargarlo anteriormente
+  
+- ingresar a la carpeta donde se creo la aplicacion e iniciar el servidor con `npm strat`
+
 ![image](https://github.com/Mauricio-A-Monroy/lab7/assets/111905757/7c24a545-9078-493f-9efd-af1859db8ffb)
 ![image](https://github.com/Mauricio-A-Monroy/lab7/assets/111905757/ea1d6c96-d617-43e3-a948-fca73497ced2)
 
